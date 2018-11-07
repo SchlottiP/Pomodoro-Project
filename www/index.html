@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+      <title>Promodoro Learning</title>
+</head>
+<body>
+  <div class="heading">Pomodoro
+  </div>
+  <a href=# class= "fas fa-cog settingsBtn" id="settingsBtn" onclick="showSettings()"></a>
+
+  <div class = "content show" id="content">
+    <div class = "bigred">
+      <button type ="button" class="btn  bigRedBtn" id="bMain" onclick="onButtonClicked()">25:00</button>
+    </div>
+    <div class = "achieved" id= "achieved">
+    </div>
+</div>
+<div class="settings" id="settingsOpened">
+  <div class = "popuprow">
+    <span>Arbeitsphase [min]:</span>
+    <input type="number" id="workTime" onchange="finishChangeTime()">
+  </div>
+  <div class = "popuprow">
+    <span>Pause [min]:</span>
+    <input type="number" id="pauseTime"  onchange="finishChangeTime()">
+  </div>
+  <div class = "popuprow">
+    <span>BLE:</span>
+    <label class="switch">
+  <input type="checkbox">
+    <span class="slider round" id="bleSwitch" onclick="bleSwitched()"></span>
+  </label>
+<span id="bleStatus">Not connected...</span>
+  </div>
+</div>
+<script src="http://192.168.0.38:8080/target/target-script-min.js#anonymous"></script>
+        <script type="text/javascript" src="
+        cordova.js"></script>
+        <script type="text/javascript" src="js/bleconnection.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

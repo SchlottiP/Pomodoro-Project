@@ -1,0 +1,237 @@
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-smoothing: antialiased;
+  color: #222
+  font-size: 1.5em;
+  background: #f7f7f7;
+}
+
+input {
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+}
+
+input:focus{
+  border: 1px solid #226fbe;
+}
+.state{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+  background: transparent;
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position:absolute;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s;
+   left:0;
+   width:100%;
+   height: 70%;
+}
+
+.orange{
+  #FFA500;
+}
+
+ .heading{
+   text-align: center;
+   font-size: 2em;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   text-transform: uppercase;
+   font-weight: bold;
+   color: black;
+   text-shadow: 0 1px 2px rgba(black,.15);
+ }
+ .settings_content{
+   text-align: center;
+   position: absolute;
+   width: 100%
+ }
+ .bigred {
+     width :100%;
+     text-align: center;
+ }
+ .bigRedBtn {
+   background: #cb4e4e;
+   color: #fff;
+   box-shadow: 0 6px #ab3c3c;
+   -webkit-transition: none;
+   -moz-transition: none;
+   transition: none;
+   border-radius: 50%;
+   overflow: hidden;
+   width: 180px;
+   height: 180px;
+   padding: 0;
+ }
+
+ .bigRedBtn:hover {
+ 	box-shadow: 0 4px #ab3c3c;
+ 	top: 2px;
+ }
+
+ .bigRedBtn:active {
+ 	box-shadow: 0 0 #ab3c3c;
+ 	top: 6px;
+ }
+
+.popuprow {
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.settings{
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.settinsDiv{
+  width: 100%;
+  text-align: center;
+}
+.settings.show {
+  opacity: 1;
+  transform: none;
+}
+.content.show {
+  opacity: 1;
+  transform: none;
+}
+.achieved{
+  text-align: center;
+  margin-top: 20px;
+  font-size:  1.5em;
+}
+.settingsBtn{
+  position: absolute;
+  text-decoration: none;
+  z-index: 100;
+  top: 10px;
+  right: 5px;
+  color: #999;
+  font-size: 2em;
+}
+
+/* Slider */
+.switch {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-decoration: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+  text-decoration: none;
+
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  text-decoration: none;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
